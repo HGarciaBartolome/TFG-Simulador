@@ -2,4 +2,6 @@
 
 Carretera::Carretera()
 {
+
+	cout << "\n Carretera \n";
 }

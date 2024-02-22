@@ -70,6 +70,16 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ExecutablePath>$(VC_ExecutablePath_x64);$(CommonExecutablePath);C:\Users\CELIA\Desktop\Uni\TFG\Codigo\TFG Simulador\src</ExecutablePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Users\CELIA\Desktop\Uni\TFG\Codigo\TFG Simulador\src</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Users\CELIA\Desktop\Uni\TFG\Codigo\TFG Simulador\src</ExternalIncludePath>
+    <ReferencePath>$(VC_ReferencesPath_x64);C:\Users\CELIA\Desktop\Uni\TFG\Codigo\TFG Simulador\src</ReferencePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);C:\Users\CELIA\Desktop\Uni\TFG\Codigo\TFG Simulador\src</LibraryPath>
+    <LibraryWPath>$(WindowsSDK_MetadataPath);C:\Users\CELIA\Desktop\Uni\TFG\Codigo\TFG Simulador\src</LibraryWPath>
+    <SourcePath>$(VC_SourcePath);C:\Users\CELIA\Desktop\Uni\TFG\Codigo\TFG Simulador\src</SourcePath>
+    <ExcludePath>$(CommonExcludePath);$(VC_ExecutablePath_x64);$(VC_LibraryPath_x64);C:\Users\CELIA\Desktop\Uni\TFG\Codigo\TFG Simulador\src</ExcludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -104,6 +114,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\CELIA\Desktop\Uni\TFG\Codigo\TFG Simulador\src</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>C:\Users\CELIA\Desktop\Uni\TFG\Codigo\TFG Simulador\src</AdditionalUsingDirectories>
+      <AdditionalBMIDirectories>C:\Users\CELIA\Desktop\Uni\TFG\Codigo\TFG Simulador\src</AdditionalBMIDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,7 +140,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="TFG Simulador.cpp" />
+    <ClCompile Include="src\Carretera.cpp" />
+    <ClCompile Include="src\Semaforo.cpp" />
+    <ClCompile Include="src\TFG Simulador.cpp" />
+    <ClCompile Include="src\Vehiculo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Carretera.h" />
+    <ClInclude Include="src\Semaforo.h" />
+    <ClInclude Include="src\Vehiculo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

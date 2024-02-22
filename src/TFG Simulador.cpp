@@ -1,10 +1,17 @@
+#pragma once
+#include <iostream>
+#include "Semaforo.h"
+#include "Vehiculo.h"
+#include "Carretera.h"
 
 
-#include <Carretera.cpp>
-#include <Vehiculo.cpp>
-#include <Semaforo.cpp>
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Semaforo TestS;
+    Vehiculo TestV;
+    Carretera TestC;
+
+    
+    cout << "Hello World! 212 1\n";
 }
